@@ -71,5 +71,14 @@ git log
 josh@dell ~/Dropbox/udemy/curso-git-github/teste/curso-git $ cd
 ../../repositorio/
 
+// criando mais dois arquivos para versionar dentro do projeto
+touch codigo1.py codigo2.py
 
+// rastrear todos os arquivos
+git add .
 
+// cominatando os arquivos recém adicionados
+git commit -m "adicionados mais dois arquivos de código"
+
+// enviando os arquivos recém adicionados para o github
+git push origin master
