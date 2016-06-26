@@ -134,3 +134,9 @@ git status
 git commit -m "deletando o arquivo codigo2.py"
 git push origin master
 
+
+// renomeando arquivos versionados
+git mv codigo1.py codigo.py
+git status
+	renamed:    codigo1.py -> codigo.py
+
