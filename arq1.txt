@@ -1,3 +1,4 @@
+// GIT
 // criando arquivo para versionar
 touch arq1.txt
 
@@ -34,7 +35,7 @@ git log
 
 
 ########################################################
-GITHUB
+// GITHUB
 // criando um repositório no https://github.com/
 https://github.com/new
 // após seguir todos os passos na url acima
