@@ -48,3 +48,28 @@ git remote add origin https://github.com/Josue23/curso-git.git
 
 // enviando as alterações para o github
 git push origin master
+
+
+
+
+#########################################################
+// OBTENTO O PROJETO DO GITHUB
+cd ..
+mkdir teste
+cd teste/
+
+https://github.com/Josue23/curso-git
+// clico no botão verde "clone or download", copio a url
+git clone https://github.com/Josue23/curso-git.git
+
+cd curso-git/
+// o projeto vem completo, inclusive com os logs
+git log
+
+// rastreando todos os arquivos
+// voltando para o diretório do projeto
+josh@dell ~/Dropbox/udemy/curso-git-github/teste/curso-git $ cd
+../../repositorio/
+
+
+
