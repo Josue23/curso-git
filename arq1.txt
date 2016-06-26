@@ -1,4 +1,13 @@
-// inicializando o reporitorio
+// criando arquivo para versionar
+touch arq1.txt
+
+// setando email
+git config --global user.email "josuerodrigues@gmail.com"
+
+// setando nome
+git config --global user.name "josue23"
+
+// inicializando o repositório
 git init
 
 // verificar a situação dos arquivos no repositório
@@ -8,3 +17,10 @@ git status
 
 // rastrear o arquivo
 git add arq1.txt
+
+git status
+Changes to be committed:
+
+// commitar arquivo no repositório
+git commit -m "arquivo inicial"
+
