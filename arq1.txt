@@ -88,3 +88,9 @@ touch .gitignore
 echo "todo.txt" >> .gitignore // inserindo todo.txt dentro de .gitignore
 // o arquivo .gitignore é para ser rastreado
 // o conteúdo do .gitignore não é para ser rastreado
+
+
+git add .
+git status
+git commit -m "adicionado o arquivo .gitignore"
+git push origin master
