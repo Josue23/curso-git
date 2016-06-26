@@ -82,3 +82,9 @@ git commit -m "adicionados mais dois arquivos de código"
 
 // enviando os arquivos recém adicionados para o github
 git push origin master
+
+// .gitignore
+touch .gitignore
+echo "todo.txt" >> .gitignore // inserindo todo.txt dentro de .gitignore
+// o arquivo .gitignore é para ser rastreado
+// o conteúdo do .gitignore não é para ser rastreado
