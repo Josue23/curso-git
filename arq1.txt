@@ -100,4 +100,36 @@ git push origin master
 git commit -am "rastreando e comitando ao mesmo tempo"
 
 // voltar o aplicativo a um estado anterior
+git log  // exibe os logos
+		 // eu copio o hash do commit para o qual eu quero voltar
+
+git checkout cca9ab46a08cf910a8ac770dc1f34bf2bd408527
+HEAD is now at cca9ab4... adicionado o arquivo .gitignore
+
+
+// voltando para o último commit
+git checkout 3d9f2201dc20ef7ef7adf569e0d727137afd22f4
+
+#####################################################
+GIT LOG
+// verificando o histórico do repositório
+// exibir os três últimos commits
+git log -n 3
+
+// exibir o resumo dos últimos dois commits
+git log -n 2 --oneline
+3d9f220 rastreando e comitando ao mesmo tempo
+cca9ab4 adicionado o arquivo .gitignore
+
+// exibir resumo dos arquivos alterados nos últimos três commits
+git log -n 3 --stat
+
+###########################################################
+
+// removendo arquivos  do repositório
+rm codigo2.py       // deleta codigo2.py do diretório
+git add codigo2.py  // envia codigo2.py para a stage area
+git status
+	deleted:    codigo2.py
+git commit -m "deletando o arquivo codigo2.py"
 
