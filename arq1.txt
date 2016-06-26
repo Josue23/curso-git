@@ -132,4 +132,5 @@ git add codigo2.py  // envia codigo2.py para a stage area
 git status
 	deleted:    codigo2.py
 git commit -m "deletando o arquivo codigo2.py"
+git push origin master
 
