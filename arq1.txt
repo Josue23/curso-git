@@ -146,4 +146,8 @@ git checkout -- arq1.txt      // desfaz as alterações em arq1.txt
 
 
 // removendo arquivo e recuperando em seguida
+git rm arq1.txt            // deleta arq1.txt
+git checkout HEAD arq1.txt // recupera arq1.txt
+
+// desfazendo mudanças rastreadas
 
