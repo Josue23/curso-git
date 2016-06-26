@@ -140,3 +140,10 @@ git mv codigo1.py codigo.py
 git status
 	renamed:    codigo1.py -> codigo.py
 
+// desfazendo mudanças que ainda não são rastreadas
+echo "mudança" >> arq1.txt    // inserindo a palavra mudança em arq1.txt
+git checkout -- arq1.txt      // desfaz as alterações em arq1.txt
+
+
+// removendo arquivo e recuperando em seguida
+
