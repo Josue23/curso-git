@@ -1,0 +1,10 @@
+// inicializando o reporitorio
+git init
+
+// verificar a situação dos arquivos no repositório
+git status
+	Untracked files:
+	arquivo não rastreado ainda
+
+// rastrear o arquivo
+git add arq1.txt
