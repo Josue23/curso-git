@@ -25,3 +25,23 @@ Changes to be committed:
 git commit -m "arquivo inicial"
 
 // alterando o arquivo arq1.txt
+altera o arq1.txt
+git add arq1.txt
+git commit "mensagem do commit"
+
+// git log, verificando alterações
+git log
+
+
+########################################################
+GITHUB
+// criando um repositório no https://github.com/
+https://github.com/new
+// após seguir todos os passos na url acima
+// vai ser criado um repositório vazio
+
+// apontando o projeto para o github
+// linkando o projeto que está no github com a minha máquina local
+git remote add origin https://github.com/Josue23/curso-git.git
+
+// enviando as alterações para o github
