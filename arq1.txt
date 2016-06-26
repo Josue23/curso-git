@@ -24,3 +24,4 @@ Changes to be committed:
 // commitar arquivo no repositório
 git commit -m "arquivo inicial"
 
+// alterando o arquivo arq1.txt
