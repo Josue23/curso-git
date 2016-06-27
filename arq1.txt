@@ -99,7 +99,7 @@ git push origin master
 // rastreando e cominatando ao mesmo tempo
 git commit -am "rastreando e comitando ao mesmo tempo"
 
-// voltar o aplicativo para um commit anterior, sem desfazer as mudanças
+// voltar o aplicativo a um estado anterior
 git log  // exibe os logos
 		 // eu copio o hash do commit para o qual eu quero voltar
 
@@ -193,4 +193,33 @@ git branch -d novo-branch
 git branch -D novo-branch  // uso -D quando tenho commit na branch
 Deleted branch novo-branch (was 7317eb2).
 
-alteração
+// criando uma nova branch e mudando para a mesma
+git checkout -b nova_branch
+M	arq1.txt
+Switched to a new branch 'nova_branch'
+
+git branch                     // me certificando que estou na nova_branch
+  master
+* nova_branch
+
+echo "alteração" >> arq1.txt       // fazendo alteração na nova_branch
+git commit -am "alteração em arq1" // comitando na nova_branch
+git push origin nova_branch        // enviando alterações para o repositório
+remoto
+
+// mergeando duas branches
+git checkout master         // muda para a branch master
+Switched to branch 'master'
+
+git branch --no-merged    // verificando as branches que não estão mescladas
+  nova_branch
+
+git merge nova_branch -m "mesclando branches"
+Updating 7317eb2..c494379
+Fast-forward (no commit created; -m option ignored)
+ arq1.txt | 37 ++++++++++++++++++++++++++++++++++++-
+ 1 file changed, 36 insertions(+), 1 deletion(-)
+
+
+git pull origin master
+git push origin master
