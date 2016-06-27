@@ -99,7 +99,7 @@ git push origin master
 // rastreando e cominatando ao mesmo tempo
 git commit -am "rastreando e comitando ao mesmo tempo"
 
-// voltar o aplicativo a um estado anterior
+// voltar o aplicativo para um commit anterior, sem desfazer as mudanças
 git log  // exibe os logos
 		 // eu copio o hash do commit para o qual eu quero voltar
 
