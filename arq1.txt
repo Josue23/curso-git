@@ -157,5 +157,40 @@ git reset --hard              // retira tudo da stage area e desfaz as alteraç�
 
 
 // desfaz mudanças comitadas
+git reset HEAD~1       // desfaz o último commit
+                       // o arquivo volta para a stage area
+git reset --hard       // desfaz todas as alterações que estão na stage area 
 
-Josué
+
+
+#################################################
+BRANCH
+// criando uma nova branch
+git branch novo-branch
+
+// listando as branches
+git branch
+* master
+  novo-branch
+
+
+// trocando de branch
+git checkout novo-branch 
+M	arq1.txt
+Switched to branch 'novo-branch'
+
+// verificando
+git branch
+  master
+* novo-branch
+
+
+// criando e trocando de branch
+git checkout -b design       // cria a branch design e muda para a mesma
+
+// deletando uma branch    // não posso estar na branch que quero deletar
+git branch -d novo-branch
+git branch -D novo-branch  // uso -D quando tenho commit na branch
+Deleted branch novo-branch (was 7317eb2).
+
+alteração
