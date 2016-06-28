@@ -2,11 +2,35 @@
 // criando arquivo para versionar
 touch arq1.txt
 
+###################################################
+CONFIGURAÇÃO
 // setando email
 git config --global user.email "##############@gmail.com"
 
 // setando nome
 git config --global user.name "#####23"
+
+// setando vim como editor padrão no git
+git config --global core.editor "vim"
+
+// verificando quem é o user setado no meu git
+git config user.name
+josue23
+// verificando qual o e-mail setado
+git config user.email
+##############@gmail.com
+// exibindo todas as configurações
+git config --list
+user.email=##############@gmail.com
+user.name=josue23
+core.editor=vim
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+remote.origin.url=https://github.com/Josue23/curso-git.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+################################################################
 
 // inicializando o repositório
 git init
@@ -15,6 +39,27 @@ git init
 git status
 	Untracked files:
 	arquivo não rastreado ainda
+
+################################################################
+CICLO DE VIDA DOS STATUS DOS ARQUIVOS
+- O git separa em quatro estados bem definidos como os arquivos vão ser:
+1 - untracked
+	O arquivo acabou de ser adicionado no repositório mas ainda não foi visto
+pelo git. Ainda não tem versão.
+	ex: touch example.txt
+2 - unmodified
+	Depois que o arquivo é adicionado ao git
+3 - modified
+	Depois que o arquivo é editado
+	echo "inserindo texto" >> example.txt
+	preciso dar git add example.txt para adicionar as alterações que fiz agora
+4 - staged
+	ex: git add example.txt
+	Área onde vai ser criado a versão
+	Depois de ser modificado o arquivo
+	Status antes do commit
+	Depois de fazer o commit os arquivos voltam para unmodified e o processo
+começa todo novamente
 
 // rastrear o arquivo
 git add arq1.txt
@@ -29,9 +74,7 @@ git commit -m "arquivo inicial"
 altera o arq1.txt
 git add arq1.txt
 git commit "mensagem do commit"
-
-// git log, verificando alterações
-git log
+#####################################################################
 
 
 ########################################################
@@ -68,8 +111,7 @@ git log
 
 // rastreando todos os arquivos
 // voltando para o diretório do projeto
-josh@dell ~/Dropbox/udemy/curso-git-github/teste/curso-git $ cd
-../../repositorio/
+josh@dell ~/Dropbox/udemy/curso-git-github/teste/curso-git $ cd ../../repositorio/
 
 // criando mais dois arquivos para versionar dentro do projeto
 touch codigo1.py codigo2.py
@@ -100,7 +142,7 @@ git push origin master
 git commit -am "rastreando e comitando ao mesmo tempo"
 
 // voltar o aplicativo a um estado anterior
-git log  // exibe os logos
+git log  // exibe os logs
 		 // eu copio o hash do commit para o qual eu quero voltar
 
 git checkout cca9ab46a08cf910a8ac770dc1f34bf2bd408527
@@ -111,10 +153,27 @@ HEAD is now at cca9ab4... adicionado o arquivo .gitignore
 git checkout 3d9f2201dc20ef7ef7adf569e0d727137afd22f4
 
 #####################################################
-GIT LOG
+GIT LOG, GIT SHOW e GIT DIFF
 // verificando o histórico do repositório
-// exibir os três últimos commits
-git log -n 3
+// exibir os três últimos commits com algumas informações:
+	de qual branch para qual branch
+	se houve merge entre branches
+git log -n 3 --decorate
+
+// exibis os últimos três commits do autor josue23
+git log -n 3 --author="josue23"
+
+// exibe os commits em ordem alfabética por autor com o total de commits e os
+respsctivos commits
+git shortlog
+git shortlog -sn   // exibe somente a quantidade de commits e o autor
+    24  josue23
+git log --graph    // exibe o histórico das branches com gráfico
+
+// exibe o autor, o que foi adicionado, o que foi deletado a data, qual a hash
+GIT SHOW
+git show 1949d810cf0a3e0ff8e4f0f2351748e8fbab2285
+
 
 // exibir o resumo dos últimos dois commits
 git log -n 2 --oneline
@@ -124,7 +183,14 @@ cca9ab4 adicionado o arquivo .gitignore
 // exibir resumo dos arquivos alterados nos últimos três commits
 git log -n 3 --stat
 
+GIT DIFF
+// permite verificar as alterações antes de salvar a versão e fazer o commit
+git diff
+
+
 ###########################################################
+###########################################################
+
 
 // removendo arquivos  do repositório
 rm codigo2.py       // deleta codigo2.py do diretório
@@ -205,7 +271,7 @@ git branch                     // me certificando que estou na nova_branch
 echo "alteração" >> arq1.txt       // fazendo alteração na nova_branch
 git commit -am "alteração em arq1" // comitando na nova_branch
 git push origin nova_branch        // enviando alterações para o repositório
-remoto
+remoto nova_branch
 
 // mergeando duas branches
 git checkout master         // muda para a branch master
