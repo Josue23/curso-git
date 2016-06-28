@@ -186,6 +186,7 @@ git log -n 3 --stat
 GIT DIFF
 // permite verificar as alterações antes de salvar a versão e fazer o commit
 git diff
+git diff --name-only   // exibe somente o nome dos arquivos modificados
 
 
 ###########################################################
