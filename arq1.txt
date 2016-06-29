@@ -227,6 +227,18 @@ git reset HEAD~1       // desfaz o último commit
 git reset --hard       // desfaz todas as alterações que estão na stage area 
 
 
+desfazendo mudanças comitadas
+git reset --soft 573ba8d253b872d485301785491f6de9aa9e57da
+// copia a hash do commit anterior ao commit que eu quero voltar
+	// mata o commit
+	// volta os arquivos para stage sem alterar as modificações
+git reset --mixed 573ba8d253b872d485301785491f6de9aa9e57da
+	// mata o commit
+	// volta os arquivos para o estado antes do stage, modified
+git reset --hard 573ba8d253b872d485301785491f6de9aa9e57da
+HEAD is now at 573ba8d adicionados os arquivos .bashrc e .vimrc
+	// mata o commit e tudo que foi feito nele
+	// é como se o commit não tivesse sido feito
 
 #################################################
 BRANCH
@@ -286,5 +298,8 @@ Fast-forward (no commit created; -m option ignored)
  1 file changed, 36 insertions(+), 1 deletion(-)
 
 
+testando
 git pull origin master
 git push origin master
+
+testando 
