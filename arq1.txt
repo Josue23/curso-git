@@ -191,9 +191,7 @@ git diff --name-only   // exibe somente o nome dos arquivos modificados
 
 ###########################################################
 ###########################################################
-
-
-// removendo arquivos  do repositório
+DESFAZENDO COISAS
 rm codigo2.py       // deleta codigo2.py do diretório
 git add codigo2.py  // envia codigo2.py para a stage area
 git status
@@ -242,7 +240,7 @@ git branch
 
 
 // trocando de branch
-git checkout novo-branch 
+git checkout novo-branch
 M	arq1.txt
 Switched to branch 'novo-branch'
 
