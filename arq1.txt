@@ -88,11 +88,15 @@ https://github.com/new
 // linkando o projeto que está no github com a minha pasta local que estou no
 momento
 git remote add origin https://github.com/Josue23/curso-git.git
+git remote  // comando
+origin      // saída do comando git remote
+git remote  // exibe mais informações
+
 
 // enviando as alterações para o github
 git push origin master
-
-
+	// vai para o meu origin
+    // vem do branch master, que é o branch padrão
 
 
 #########################################################
@@ -104,6 +108,8 @@ cd teste/
 https://github.com/Josue23/curso-git
 // clico no botão verde "clone or download", copio a url
 git clone https://github.com/Josue23/curso-git.git
+git clone https://github.com/Josue23/curso-git.git curso-de-git-clone
+	// posso mudar o nome da pasta depois do .git no fim da url
 
 cd curso-git/
 // o projeto vem completo, inclusive com os logs
@@ -212,7 +218,7 @@ git checkout -- arq1.txt      // desfaz as alterações em arq1.txt
 
 // removendo arquivo e recuperando em seguida
 git rm arq1.txt            // deleta arq1.txt
-git checkout HEAD arq1.txt // recupera arq1.txt
+git checkout HEAD arq1.txt // remove arq1.txt do stage
 
 // desfazendo mudanças rastreadas
 echo "python" >> arq1.txt     // inserindo a palavra python em arq1.txt
